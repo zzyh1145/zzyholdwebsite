@@ -26,7 +26,7 @@
     <input id="searchBar" type=text style="width:100px;"/>
     <button id="searchButtons" onclick="bingSearch()">必应搜索</button>
     
-    <p><img src="http://hlapi.cn/api/ipqm"></p>
+    <p><img src="http://hlapi.cn/api/ipqm"width="250" height="105"></p>
     <font size="5"> 
         <li> <a href="http://jvgm.cn/">java手机乐园</a> </li>
         <li> <a href="http://dcms.net.cn/index.php"> DCMS社交网站</a> </li>
@@ -64,19 +64,19 @@
     <script> 
         show();
         function show() { 
-            var date = new Date(); //日期对象 
+            var date = new Date(); 
             var now = ""; 
-            now = date.getFullYear()+"年";           //读英文就行了 
-            now = now + (date.getMonth()+1)+"月"; //取月的时候取的是当前月-1如果想取当前月+1就可以了 
+            now = date.getFullYear()+"年";           
+            now = now + (date.getMonth()+1)+"月"; 
             now = now + date.getDate()+"日"; 
             now = now + date.getHours()+"时"; 
             now = now + date.getMinutes()+"分"; 
             now = now + date.getSeconds()+"秒"; 
-            document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串 
-            setTimeout("show()",1000);              //设置过1000毫秒就是1秒，调用show方法 
+            document.getElementById("nowDiv").innerHTML = now;
+            setTimeout("show()",1000);              
         } 
 
-        function bingSearch() {     // 感觉用JavaScript来搜索有点蠢…
+        function bingSearch() {     
             var v=document.getElementById("searchBar");
             location.href="http://bing.com/search?q="+v.value;
         }
